@@ -1,5 +1,8 @@
 if SHIELD_DIRECT_TEST
 
+config ZMK_KEYBOARD_NAME
+	default "DirectTest"
+
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
 	default 1
 
