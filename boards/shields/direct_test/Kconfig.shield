@@ -1,0 +1,2 @@
+config SHIELD_DIRECT_TEST
+	def_bool $(shields_dt_list,direct_test)

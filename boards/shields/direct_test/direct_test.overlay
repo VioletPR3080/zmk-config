@@ -1,0 +1,33 @@
+// direct_test shield — 21 keys, one GPIO per switch
+
+/ {
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            // P0 pins
+            <&gpio0  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 0)  W
+            , <&gpio0  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 1)  A
+            , <&gpio0  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 2)  S
+            , <&gpio0  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 3)  D
+            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 4)  Q
+            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 5)  E
+            , <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 6)  R
+            , <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 7)  F
+            , <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 8)  SPACE
+            , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0, 9)  ENTER
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,10)  LSHIFT
+            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,11)  LCTRL
+            // P1 pins
+            , <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,12)  1
+            , <&gpio1  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,13)  2
+            , <&gpio1  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,14)  3
+            , <&gpio1  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,15)  4
+            , <&gpio1  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,16)  5
+            , <&gpio1  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,17)  LEFT
+            , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,18)  UP
+            , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,19)  DOWN
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RC(0,20)  RIGHT
+            ;
+    };
+};

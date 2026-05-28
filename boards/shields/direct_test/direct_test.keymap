@@ -1,0 +1,35 @@
+// direct_test keymap — 21 direct GPIO keys, single layer, all rows = 0
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                // RC(0, 0..11) — P0 pins
+                &kp W        // 0
+                &kp A        // 1
+                &kp S        // 2
+                &kp D        // 3
+                &kp Q        // 4
+                &kp E        // 5
+                &kp R        // 6
+                &kp F        // 7
+                &kp SPACE    // 8
+                &kp RET      // 9
+                &kp LSHFT    // 10
+                &kp LCTRL    // 11
+                // RC(0, 12..20) — P1 pins
+                &kp N1       // 12
+                &kp N2       // 13
+                &kp N3       // 14
+                &kp N4       // 15
+                &kp N5       // 16
+                &kp LEFT     // 17
+                &kp UP       // 18
+                &kp DOWN     // 19
+                &kp RIGHT    // 20
+            >;
+        };
+    };
+};
