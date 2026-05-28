@@ -1,12 +1,9 @@
 if SHIELD_DIRECT_TEST
 
-config ZMK_KSCAN_DIRECT_POLLING
-	default n
-
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-	default 5
+	default 1
 
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
-	default 5
+	default 1
 
 endif
