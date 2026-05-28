@@ -9,6 +9,8 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
+        debounce-press-ms = <1>;
+        debounce-release-ms = <1>;
         debounce-scan-period-ms = <1>;
         poll-period-ms = <1>;
         input-gpios
@@ -47,11 +49,12 @@
         >;
     };
 
-    leds {
-        compatible = "gpio-leds";
-        indicator: led_0 {
-            gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
-            label = "Indicator";
-        };
+};
+
+&gpio0 {
+    indicator_hog {
+        gpio-hog;
+        gpios = <17 GPIO_ACTIVE_HIGH>;
+        output-high;
     };
 };

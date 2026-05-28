@@ -10,17 +10,8 @@
             bindings = <
                 &kp W &kp A &kp S &kp D &kp Q &kp E &kp F
                 &kp SPACE &kp RET &kp LSHFT &kp LCTRL
-                &kp N1 &kp N2 &kp N3 &kp N4 &mo 1
+                &bt BT_SEL 0 &bt BT_CLR &bt BT_NXT &bt BT_PRV &kp N5
                 &kp LEFT &kp UP &kp DOWN &kp RIGHT
-            >;
-        };
-
-        bt_layer {
-            bindings = <
-                &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans
-                &bt BT_SEL 0 &bt BT_CLR &bt BT_NXT &bt BT_PRV &trans
-                &trans &trans &trans &trans
             >;
         };
     };
